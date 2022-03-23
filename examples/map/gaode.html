@@ -1,0 +1,38 @@
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <title>异步加载地图</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    </head>
+    <body>
+        <div id="map"></div>
+        <!-- <script  src="../dist/CMap.js"></script> -->
+        <script  src="./../index.js"></script>
+    <script>
+        const options = {
+            id: 'map', // 配置地图的着陆点  id
+            mapAk: '', // 写入Ak
+            type: 'AMAP', // 设置使用地图的类型 BMAP 百度地图、 TMAP 腾讯、AMAP 高德
+            points: [116.404, 39.915], // 中心点设置 
+            areaName: '上海市', // 中心城市 - 仅百度
+            zoom: 12, // 缩放级别 
+            enableScrollWheel: false, // 开启滚轮 
+            isScaleCtrl: true, // 添加比例尺控件
+            isZoomCtrl: true, // 添加缩放控件
+            navi3DCtrl: true, // 添加3D控件 
+        }
+        const cmap = new CMap(options)
+    </script>
+    <style>
+        body, html, #map{
+            overflow: hidden;
+            width: 800px;
+            height: 500px;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
+    </style>
+    </body>
+</html>
